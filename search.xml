@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/08/10/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>hexo搭建个人博客</title>
+    <url>/2020/08/11/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<blockquote>
+<p>本机环境</p>
+</blockquote>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># hexo -v</span></span><br><span class="line"><span class="attr">hexo:</span> <span class="number">5.0</span><span class="number">.2</span></span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h3 id="1-init"><a href="#1-init" class="headerlink" title="1. init"></a>1. init</h3><blockquote>
+<p>初始化hero blog目录</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-server"><a href="#2-server" class="headerlink" title="2. server"></a>2. server</h3><blockquote>
+<p>启动服务</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在浏览器地址中输入 <a href="http://localhost:4000/">http://localhost:4000</a> 即可访问</p>
+</blockquote>
+<h3 id="3-writing"><a href="#3-writing" class="headerlink" title="3. writing"></a>3. writing</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建的新文章路径在： &lt;folder&gt;/source/_posts/newArticleTitle.md</span></span><br><span class="line">$ hexo new <span class="string">&quot;newArticleTitle&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建的新文章路径在： &lt;folder&gt;/source/newArticleTitle/index.md</span></span><br><span class="line">$ hexo new page <span class="string">&quot;newArticleTitle&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建的新文章路径在： &lt;folder&gt;/source/about/me.md</span></span><br><span class="line">$ hexo new page --path about/me <span class="string">&quot;About me&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-theme"><a href="#4-theme" class="headerlink" title="4. theme"></a>4. theme</h3><blockquote>
+<p>主题为 <a href="https://github.com/iissnan/hexo-theme-next">hexo-theme-next</a></p>
+</blockquote>
+<h4 id="4-1-install"><a href="#4-1-install" class="headerlink" title="4.1 install"></a>4.1 install</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-2-config"><a href="#4-2-config" class="headerlink" title="4.2 config"></a>4.2 config</h4><ol>
+<li><strong>编辑 <code>&lt;folder&gt;/_config.yml</code></strong></li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="comment"># theme: landscape</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br><span class="line"><span class="string">...</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># language: en</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br><span class="line"><span class="string">...</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><strong>Tags page</strong></li>
+</ol>
+<ul>
+<li>Create a page named <code>tags</code></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page <span class="string">&quot;tags&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Edit tags page, set page type to <code>tags</code></li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: All tags</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Add <code>tags</code> to theme <code>_config.yml</code></li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">    <span class="attr">home:</span> <span class="string">/</span></span><br><span class="line">    <span class="attr">archives:</span> <span class="string">/archives</span></span><br><span class="line">    <span class="attr">tags:</span> <span class="string">/tags</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><strong>Categories page</strong></li>
+</ol>
+<ul>
+<li>Create a page named <code>categories</code></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page <span class="string">&quot;categories&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Edit categories page, set page type to <code>categories</code></li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: All categories</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Add <code>categories</code> to theme <code>_config.yml</code></li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">    <span class="attr">home:</span> <span class="string">/</span></span><br><span class="line">    <span class="attr">archives:</span> <span class="string">/archives</span></span><br><span class="line">    <span class="attr">categories:</span> <span class="string">/categories</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="4">
+<li><strong>check <code> &lt;folder&gt;/theme/next/_config.yml</code></strong></li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="comment">#about: /about/ || fa fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>blog</tag>
+        <tag>next</tag>
+      </tags>
+  </entry>
+</search>
