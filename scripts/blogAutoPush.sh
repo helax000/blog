@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 自动完成代码提交
+# 自动完成 githubPage 仓库代码提交
 main(){
     cd ../../
     hexo clean

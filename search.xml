@@ -1,110 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/08/10/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>js 宏任务与微任务</title>
+    <url>/2020/11/26/jsMacroAndMicroTask/</url>
+    <content><![CDATA[<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><ul>
+<li><a href="https://juejin.cn/post/6844903512845860872">这一次，彻底弄懂 JavaScript 执行机制</a> ——ssssyoki</li>
+<li><a href="https://www.cnblogs.com/wangziye/p/9566454.html">js 宏任务和微任务</a> ——wangziye</li>
+</ul>
+<h3 id="宏任务"><a href="#宏任务" class="headerlink" title="宏任务"></a>宏任务</h3><table>
+<thead>
+<tr>
+<th></th>
+<th>浏览器</th>
+<th>Node</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>setTimeout</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>setInterval</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>setImmediate</td>
+<td>×</td>
+<td>√</td>
+</tr>
+<tr>
+<td>requestAnimationFrame</td>
+<td>√</td>
+<td>×</td>
+</tr>
+</tbody></table>
+<h3 id="微任务"><a href="#微任务" class="headerlink" title="微任务"></a>微任务</h3><table>
+<thead>
+<tr>
+<th></th>
+<th>浏览器</th>
+<th>Node</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>process.nextTick</td>
+<td>×</td>
+<td>√</td>
+</tr>
+<tr>
+<td>MutationObserver</td>
+<td>√</td>
+<td>×</td>
+</tr>
+<tr>
+<td>(Promise)then catch finally</td>
+<td>√</td>
+<td>√</td>
+</tr>
+</tbody></table>
+<p>执行顺序为：<strong>宏任务 –&gt; 宏任务下的微任务</strong>，循环。</p>
+<h4 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;1&#x27;</span>);<span class="comment">//宏任务 1</span></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;2&#x27;</span>);<span class="comment">//宏任务 2</span></span><br><span class="line">        process.nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">&#x27;3&#x27;</span>);<span class="comment">//微任务 2</span></span><br><span class="line">            &#125;<span class="comment">//微任务 2</span></span><br><span class="line">        );<span class="comment">//宏任务 2</span></span><br><span class="line">        <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve</span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">&#x27;4&#x27;</span>);<span class="comment">//宏任务 2</span></span><br><span class="line">                resolve();<span class="comment">//宏任务 2</span></span><br><span class="line">            &#125;<span class="comment">//宏任务 2</span></span><br><span class="line">        )<span class="comment">//宏任务 2</span></span><br><span class="line">        .then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">&#x27;5&#x27;</span>)<span class="comment">//微任务 2</span></span><br><span class="line">            &#125;<span class="comment">//微任务 2</span></span><br><span class="line">        )<span class="comment">//宏任务 2</span></span><br><span class="line">    &#125;<span class="comment">//宏任务 2</span></span><br><span class="line">);<span class="comment">//宏任务 1</span></span><br><span class="line">process.nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;6&#x27;</span>);<span class="comment">//微任务 1</span></span><br><span class="line">    &#125;<span class="comment">//微任务 1</span></span><br><span class="line">);<span class="comment">//宏任务 1</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;7&#x27;</span>);<span class="comment">//宏任务 1</span></span><br><span class="line">        resolve();<span class="comment">//宏任务 1</span></span><br><span class="line">    &#125;<span class="comment">//宏任务 1</span></span><br><span class="line">)<span class="comment">//宏任务 1</span></span><br><span class="line">.then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;8&#x27;</span>)<span class="comment">//微任务 1</span></span><br><span class="line">    &#125;<span class="comment">//微任务 1</span></span><br><span class="line">)<span class="comment">//宏任务 1</span></span><br><span class="line">.then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;13&#x27;</span>)<span class="comment">//微任务 1</span></span><br><span class="line">    &#125;<span class="comment">//微任务 1</span></span><br><span class="line">)<span class="comment">//宏任务 1</span></span><br><span class="line">.finally(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;14&#x27;</span>)<span class="comment">//微任务 1</span></span><br><span class="line">    &#125;<span class="comment">//微任务 1</span></span><br><span class="line">);<span class="comment">//宏任务 1</span></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;9&#x27;</span>);<span class="comment">//宏任务 2</span></span><br><span class="line">        process.nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">&#x27;10&#x27;</span>);<span class="comment">//微任务 2</span></span><br><span class="line">            &#125;<span class="comment">//微任务 2</span></span><br><span class="line">        );<span class="comment">//宏任务 2</span></span><br><span class="line">        <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve</span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">&#x27;11&#x27;</span>);<span class="comment">//宏任务 2</span></span><br><span class="line">                resolve();<span class="comment">//宏任务 2</span></span><br><span class="line">            &#125;<span class="comment">//宏任务 2</span></span><br><span class="line">        )<span class="comment">//宏任务 2</span></span><br><span class="line">        .then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">&#x27;12&#x27;</span>)<span class="comment">//微任务 2</span></span><br><span class="line">            &#125;<span class="comment">//微任务 2</span></span><br><span class="line">        )<span class="comment">//宏任务 2</span></span><br><span class="line">        .finally(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                        <span class="built_in">console</span>.log(<span class="number">15</span>);<span class="comment">//宏任务 3</span></span><br><span class="line">                    &#125;<span class="comment">//宏任务 3</span></span><br><span class="line">                )<span class="comment">//微任务 2</span></span><br><span class="line">            &#125;<span class="comment">//微任务 2</span></span><br><span class="line">        )<span class="comment">//宏任务 2</span></span><br><span class="line">    &#125;<span class="comment">//宏任务 2</span></span><br><span class="line">);<span class="comment">//宏任务 1</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>hexo搭建个人博客</title>
-    <url>/2020/08/11/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<blockquote>
-<p>本机环境</p>
-</blockquote>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># hexo -v</span></span><br><span class="line"><span class="attr">hexo:</span> <span class="number">5.0</span><span class="number">.2</span></span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<h3 id="1-init"><a href="#1-init" class="headerlink" title="1. init"></a>1. init</h3><blockquote>
-<p>初始化hero blog目录</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-server"><a href="#2-server" class="headerlink" title="2. server"></a>2. server</h3><blockquote>
-<p>启动服务</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
+<p>说明：</p>
+<ol>
+<li>我这里注释过于啰嗦，只看 <code>console.log</code> 打印行的注释即可。</li>
+<li>第一次将整体代码看做一次宏任务 1，并标注出其微任务 1 以及 宏任务 2</li>
+<li>然后将宏任务 2 看作步骤 2 的整体代码，重复步骤 2，直到完成。</li>
+<li>最后执行顺序为：宏任务 1 –&gt; 微任务 1 –&gt; 宏任务 2 –&gt; 微任务 2 …</li>
+</ol>
+<p>最后使用 node10.20.1 运行的结果为</p>
 <blockquote>
-<p>在浏览器地址中输入 <a href="http://localhost:4000/">http://localhost:4000</a> 即可访问</p>
+<p>输出: 1、7、6、8、13、14、2、4、9、11、3、10、5、12</p>
 </blockquote>
-<h3 id="3-writing"><a href="#3-writing" class="headerlink" title="3. writing"></a>3. writing</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建的新文章路径在： &lt;folder&gt;/source/_posts/newArticleTitle.md</span></span><br><span class="line">$ hexo new <span class="string">&quot;newArticleTitle&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建的新文章路径在： &lt;folder&gt;/source/newArticleTitle/index.md</span></span><br><span class="line">$ hexo new page <span class="string">&quot;newArticleTitle&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建的新文章路径在： &lt;folder&gt;/source/about/me.md</span></span><br><span class="line">$ hexo new page --path about/me <span class="string">&quot;About me&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="4-theme"><a href="#4-theme" class="headerlink" title="4. theme"></a>4. theme</h3><blockquote>
-<p>主题为 <a href="https://github.com/iissnan/hexo-theme-next">hexo-theme-next</a></p>
-</blockquote>
-<h4 id="4-1-install"><a href="#4-1-install" class="headerlink" title="4.1 install"></a>4.1 install</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-2-config"><a href="#4-2-config" class="headerlink" title="4.2 config"></a>4.2 config</h4><ol>
-<li><strong>编辑 <code>&lt;folder&gt;/_config.yml</code></strong></li>
-</ol>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="comment"># theme: landscape</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br><span class="line"><span class="string">...</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># language: en</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br><span class="line"><span class="string">...</span></span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li><strong>Tags page</strong></li>
-</ol>
-<ul>
-<li>Create a page named <code>tags</code></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page <span class="string">&quot;tags&quot;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>Edit tags page, set page type to <code>tags</code></li>
-</ul>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: All tags</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>Add <code>tags</code> to theme <code>_config.yml</code></li>
-</ul>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">    <span class="attr">home:</span> <span class="string">/</span></span><br><span class="line">    <span class="attr">archives:</span> <span class="string">/archives</span></span><br><span class="line">    <span class="attr">tags:</span> <span class="string">/tags</span></span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li><strong>Categories page</strong></li>
-</ol>
-<ul>
-<li>Create a page named <code>categories</code></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page <span class="string">&quot;categories&quot;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>Edit categories page, set page type to <code>categories</code></li>
-</ul>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: All categories</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>Add <code>categories</code> to theme <code>_config.yml</code></li>
-</ul>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">    <span class="attr">home:</span> <span class="string">/</span></span><br><span class="line">    <span class="attr">archives:</span> <span class="string">/archives</span></span><br><span class="line">    <span class="attr">categories:</span> <span class="string">/categories</span></span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="4">
-<li><strong>check <code> &lt;folder&gt;/theme/next/_config.yml</code></strong></li>
-</ol>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="comment">#about: /about/ || fa fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <categories>
-        <category>hexo</category>
+        <category>javascript</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
-        <tag>blog</tag>
-        <tag>next</tag>
+        <tag>js</tag>
       </tags>
   </entry>
 </search>
