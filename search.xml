@@ -72,8 +72,9 @@
 </ol>
 <p>最后使用 node10.20.1 运行的结果为</p>
 <blockquote>
-<p>输出: 1、7、6、8、13、14、2、4、9、11、3、10、5、12</p>
+<p>输出: 1、7、6、8、13、14、2、4、9、11、3、10、5、12、15</p>
 </blockquote>
+<p><em>注意分清楚宏任务与微任务</em></p>
 ]]></content>
       <categories>
         <category>javascript</category>
