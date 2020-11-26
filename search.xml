@@ -17,23 +17,23 @@
 </thead>
 <tbody><tr>
 <td>setTimeout</td>
-<td>√</td>
-<td>√</td>
+<td>:white_check_mark:</td>
+<td>:white_check_mark:</td>
 </tr>
 <tr>
 <td>setInterval</td>
-<td>√</td>
-<td>√</td>
+<td>:white_check_mark:</td>
+<td>:white_check_mark:</td>
 </tr>
 <tr>
 <td>setImmediate</td>
-<td>×</td>
-<td>√</td>
+<td>:x:</td>
+<td>:white_check_mark:</td>
 </tr>
 <tr>
 <td>requestAnimationFrame</td>
-<td>√</td>
-<td>×</td>
+<td>:white_check_mark:</td>
+<td>:x:</td>
 </tr>
 </tbody></table>
 <h3 id="微任务"><a href="#微任务" class="headerlink" title="微任务"></a>微任务</h3><table>
@@ -46,18 +46,18 @@
 </thead>
 <tbody><tr>
 <td>process.nextTick</td>
-<td>×</td>
-<td>√</td>
+<td>:x:</td>
+<td>:white_check_mark:</td>
 </tr>
 <tr>
 <td>MutationObserver</td>
-<td>√</td>
-<td>×</td>
+<td>:white_check_mark:</td>
+<td>:x:</td>
 </tr>
 <tr>
 <td>(Promise)then catch finally</td>
-<td>√</td>
-<td>√</td>
+<td>:white_check_mark:</td>
+<td>:white_check_mark:</td>
 </tr>
 </tbody></table>
 <p>执行顺序为：<strong>宏任务 –&gt; 宏任务下的微任务</strong>，循环。</p>
