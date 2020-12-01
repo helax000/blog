@@ -90,4 +90,18 @@
         <tag>js</tag>
       </tags>
   </entry>
+  <entry>
+    <title>vim 手册</title>
+    <url>/2020/12/01/vim%E6%89%8B%E5%86%8C/</url>
+    <content><![CDATA[<h1 id="Vim-入门到精通"><a href="#Vim-入门到精通" class="headerlink" title="Vim 入门到精通"></a>Vim 入门到精通</h1><p><embed src="/asset/pdfs/Vim 入门到精通.pdf" width="800" height="600" ></embed></p>
+<h1 id="Vim-中文用户手册"><a href="#Vim-中文用户手册" class="headerlink" title="Vim 中文用户手册"></a>Vim 中文用户手册</h1><p><embed src="/asset/pdfs/vim中文用户手册.pdf" width="800" height="600" ></embed></p>
+]]></content>
+      <categories>
+        <category>vim</category>
+      </categories>
+      <tags>
+        <tag>vim</tag>
+        <tag>pdf</tag>
+      </tags>
+  </entry>
 </search>
