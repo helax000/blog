@@ -1,17 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>vim 手册</title>
-    <url>/2020/12/01/vim%E6%89%8B%E5%86%8C/</url>
-    <content><![CDATA[<h1 id="Vim-入门到精通"><a href="#Vim-入门到精通" class="headerlink" title="Vim 入门到精通"></a>Vim 入门到精通</h1><p><embed src="/asset/pdfs/Vim 入门到精通.pdf" width="800" height="600" ></embed></p>
-<h1 id="Vim-中文用户手册"><a href="#Vim-中文用户手册" class="headerlink" title="Vim 中文用户手册"></a>Vim 中文用户手册</h1><p><embed src="/asset/pdfs/vim中文用户手册.pdf" width="800" height="600" ></embed></p>
-]]></content>
+    <title>B站资源指南</title>
+    <url>/2021/07/27/B%E7%AB%99%E8%B5%84%E6%BA%90%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<h2 id="一、计算机网络"><a href="#一、计算机网络" class="headerlink" title="一、计算机网络"></a>一、计算机网络</h2><h3 id="1-计算机网络微课堂"><a href="#1-计算机网络微课堂" class="headerlink" title="1.计算机网络微课堂"></a>1.<a href="https://www.bilibili.com/video/BV1c4411d7jb?p=1">计算机网络微课堂</a></h3><details><summary><b>介绍</b></summary>
+<p>
+
+<p>讲师：</p>
+<blockquote>
+<p>湖科大教书匠</p>
+</blockquote>
+<p>评价：</p>
+<blockquote>
+<p>通俗易懂，重点知识十分细致，配合实验，而且有考研408 的难题的讲解，也是非常适合考研党，除了课程内容外还有很多习题讲解视频。因此就业党和考研党都可以食用</p>
+</blockquote>
+</p>
+</details>
+
+<h3 id="2-王道计算机考研"><a href="#2-王道计算机考研" class="headerlink" title="2.王道计算机考研"></a>2.<a href="https://www.bilibili.com/video/BV19E411D78Q?p=1">王道计算机考研</a></h3><details><summary><b>介绍</b></summary>
+<p>
+
+<p>UP：</p>
+<blockquote>
+<p>王道论坛</p>
+</blockquote>
+<p>评价：</p>
+<blockquote>
+<p>小姐姐声音非常好听，百听不厌，内容与考研高度贴合，非常适合考研党和声音控</p>
+</blockquote>
+</p>
+</details>
+
+<h2 id="二、数据结构与算法"><a href="#二、数据结构与算法" class="headerlink" title="二、数据结构与算法"></a>二、数据结构与算法</h2><h3 id="1-数据结构入门"><a href="#1-数据结构入门" class="headerlink" title="1.数据结构入门"></a>1.<a href="https://www.bilibili.com/video/BV11s41167h6?p=1">数据结构入门</a></h3><details><summary><b>介绍</b></summary>
+<p>
+
+<p>UP：</p>
+<blockquote>
+<p>郝斌</p>
+</blockquote>
+<p>评价：</p>
+<blockquote>
+<p>思路是以初学者的思路来思考的，非常适合小白</p>
+</blockquote>
+</p>
+</details>
+
+<h3 id="2-【C语言描述】《数据结构和算法》（小甲鱼）"><a href="#2-【C语言描述】《数据结构和算法》（小甲鱼）" class="headerlink" title="2.【C语言描述】《数据结构和算法》（小甲鱼）"></a>2.<a href="https://www.bilibili.com/video/BV1jW411K7yg?p=1">【C语言描述】《数据结构和算法》（小甲鱼）</a></h3><details><summary><b>介绍</b></summary>
+<p>
+
+<p>UP：</p>
+<blockquote>
+<p>鱼C-小甲鱼</p>
+</blockquote>
+<p>评价：</p>
+<blockquote>
+<p>良心 up ，授课风格相比大学教授，语言风趣幽默，不死板，用例子带知识点，容易听得进去，亲和力拉满</p>
+</blockquote>
+</p>
+</details>
+
+<h3 id="3-尚硅谷-Java-数据结构与-Java-算法"><a href="#3-尚硅谷-Java-数据结构与-Java-算法" class="headerlink" title="3.尚硅谷 Java 数据结构与 Java 算法"></a>3.<a href="https://www.bilibili.com/video/BV1E4411H73v?p=1">尚硅谷 Java 数据结构与 Java 算法</a></h3><details><summary><b>介绍</b></summary>
+<p>
+
+<p>UP：</p>
+<blockquote>
+<p>尚硅谷</p>
+</blockquote>
+<p>讲师：</p>
+<blockquote>
+<p>韩顺平</p>
+</blockquote>
+<p>评价：</p>
+<blockquote>
+<p>用JAVA语言讲数据结构和算法，韩老师视频内容全，并且每次课都会带着你写代码，把每一个例子都会实现，韩老师口碑也不必多言了</p>
+</blockquote>
+</p>
+</details>
+
+<h2 id="三、操作系统"><a href="#三、操作系统" class="headerlink" title="三、操作系统"></a>三、操作系统</h2><h3 id="1-完结-2020-南京大学-“操作系统：设计与实现”-蒋炎岩"><a href="#1-完结-2020-南京大学-“操作系统：设计与实现”-蒋炎岩" class="headerlink" title="1.[完结]2020 南京大学 “操作系统：设计与实现” (蒋炎岩)"></a>1.<a href="https://www.bilibili.com/video/BV1N741177F5?p=1">[完结]2020 南京大学 “操作系统：设计与实现” (蒋炎岩)</a></h3><details><summary><b>介绍</b></summary>
+<p>
+
+<p>讲师：</p>
+<blockquote>
+<p>蒋炎岩</p>
+</blockquote>
+<p>评价：</p>
+<blockquote>
+<p>南大的课质量真的硬，老师讲课时用的课本是 Remzi 的 Operating Systems: Three Easy Pieces ，老师的每一节视频都比较长，一次肝完贼爽，老师把晦涩的东西讲的也非常的通俗易懂，豁然开朗</p>
+</blockquote>
+</p>
+</details>
+
+<h3 id="2-清华-操作系统原理-向勇、陈渝"><a href="#2-清华-操作系统原理-向勇、陈渝" class="headerlink" title="2.清华 操作系统原理(向勇、陈渝)"></a>2.<a href="https://www.bilibili.com/video/BV1uW411f72n">清华 操作系统原理(向勇、陈渝)</a></h3><details><summary><b>介绍</b></summary>
+<p>
+
+<p>讲师：</p>
+<blockquote>
+<p>向勇、陈渝</p>
+</blockquote>
+<p>评价：</p>
+<blockquote>
+<p>讲解非常细致，但是稍微需要有一定的基础（毕竟老师平时是给清华大学讲课的）对于我这种考不上清华的人来说，能给我个听清华老师讲课的机会，还有什么可说的呢？</p>
+</blockquote>
+</p>
+</details>
+
+<h2 id="四、计算机组成原理"><a href="#四、计算机组成原理" class="headerlink" title="四、计算机组成原理"></a>四、计算机组成原理</h2><h3 id="1-计算机组成原理（哈工大刘宏伟）"><a href="#1-计算机组成原理（哈工大刘宏伟）" class="headerlink" title="1.计算机组成原理（哈工大刘宏伟）"></a>1.<a href="https://www.bilibili.com/video/BV1t4411e7LH?p=1">计算机组成原理（哈工大刘宏伟）</a></h3><details><summary><b>介绍</b></summary>
+<p>
+
+<p>评价：</p>
+<blockquote>
+<p>他的课课不仅适合考研人，也非常适合初学者，初学者也听得懂。建议 1.5 倍速食用。</p>
+</blockquote>
+</p>
+</details>
+
+<h2 id="五、编译原理"><a href="#五、编译原理" class="headerlink" title="五、编译原理"></a>五、编译原理</h2><h3 id="1-编译原理（哈工大）"><a href="#1-编译原理（哈工大）" class="headerlink" title="1.编译原理（哈工大）"></a>1.<a href="https://www.bilibili.com/video/BV1zW411t7YE?p=1">编译原理（哈工大）</a></h3><details><summary><b>介绍</b></summary>
+<p>
+
+<p>评价：</p>
+<blockquote>
+<p>PPT 做的非常认真，讲得也很通俗易懂，思路清晰。直观简洁的，全程没有一句废话。</p>
+</blockquote>
+</p>
+</details>
+
+<h2 id="六、编程语言学习"><a href="#六、编程语言学习" class="headerlink" title="六、编程语言学习"></a>六、编程语言学习</h2><p> 以JAVA为例，目前B站上从JAVA基础一路讲到分布式的比较知名的组织有：</p>
+<ul>
+<li>尚硅谷</li>
+<li>黑马程序员</li>
+<li>动力节点</li>
+</ul>
+<p>这部分编程语言学习，不建议分块左右横跳，跟着哪套教程学，就一路学到底，因为每个老师授课习惯不同，顺序也略有差异，而且经常用一个例子由浅入深改造讲解，中途换课程容易断档，不过你可以放心，这三家的虽然各有特点，但是都足够给你讲明白！</p>
+<h2 id="七、设计模式"><a href="#七、设计模式" class="headerlink" title="七、设计模式"></a>七、设计模式</h2><h3 id="1-尚硅谷设计模式（图解-框架源码剖析）"><a href="#1-尚硅谷设计模式（图解-框架源码剖析）" class="headerlink" title="1.尚硅谷设计模式（图解 + 框架源码剖析）"></a>1.<a href="https://www.bilibili.com/video/BV1G4411c7N4">尚硅谷设计模式（图解 + 框架源码剖析）</a></h3><details><summary><b>介绍</b></summary>
+<p>
+
+<p>评价：</p>
+<blockquote>
+<p>有图有源码，良心</p>
+</blockquote>
+</p>
+</details>
+
+<h3 id="2-黑马程序员-Java-设计模式详解"><a href="#2-黑马程序员-Java-设计模式详解" class="headerlink" title="2.黑马程序员 Java 设计模式详解"></a>2.<a href="https://www.bilibili.com/video/BV1Np4y1z7BU">黑马程序员 Java 设计模式详解</a></h3><details><summary><b>介绍</b></summary>
+<p>
+
+<p>评价：</p>
+<blockquote>
+<p>有图有源码，良心</p>
+</blockquote>
+</p>
+</details>
+
+<h2 id="八、MySql"><a href="#八、MySql" class="headerlink" title="八、MySql"></a>八、MySql</h2><h3 id="1-MySQL基础教程丨mysql数据库实战（sql数据库优化）"><a href="#1-MySQL基础教程丨mysql数据库实战（sql数据库优化）" class="headerlink" title="1.MySQL基础教程丨mysql数据库实战（sql数据库优化）"></a>1.<a href="https://www.bilibili.com/video/BV1xW411u7ax">MySQL基础教程丨mysql数据库实战（sql数据库优化）</a></h3><details><summary><b>介绍</b></summary>
+<p>
+
+<p>评价：</p>
+<blockquote>
+<p>课程来自尚硅谷，有基础有实战</p>
+</blockquote>
+</p>
+</details>
+
+<h3 id="2-尚硅谷MySQL数据库高级，mysql优化，数据库优化"><a href="#2-尚硅谷MySQL数据库高级，mysql优化，数据库优化" class="headerlink" title="2.尚硅谷MySQL数据库高级，mysql优化，数据库优化"></a>2.<a href="https://www.bilibili.com/video/BV1KW411u7vy">尚硅谷MySQL数据库高级，mysql优化，数据库优化</a></h3><details><summary><b>介绍</b></summary>
+<p>
+
+<p>评价：</p>
+<blockquote>
+<p>尚硅谷的课程特点就是分好多好多好多P，每一集都好短，集数超多，如果第一天没有被这种设定劝退的话，讲的还是不错的</p>
+</blockquote>
+</p>
+</details>
+
+<h2 id="九、Maven、Git"><a href="#九、Maven、Git" class="headerlink" title="九、Maven、Git"></a>九、Maven、Git</h2><h3 id="1-2020最新Maven教程-Maven基础篇之Maven实战入门"><a href="#1-2020最新Maven教程-Maven基础篇之Maven实战入门" class="headerlink" title="1.2020最新Maven教程-Maven基础篇之Maven实战入门"></a>1.<a href="https://www.bilibili.com/video/BV1dp4y1Q7Hf">2020最新Maven教程-Maven基础篇之Maven实战入门</a></h3><details><summary><b>介绍</b></summary>
+<p>
+
+<p>评价：</p>
+<blockquote>
+<p>课程来自动力节点，从是什么，做什么，为什么到怎么用，分步清晰</p>
+</blockquote>
+</p>
+</details>
+
+<h3 id="2-Git与GitHub基础全套完整版教程（快速上手，一套搞定）"><a href="#2-Git与GitHub基础全套完整版教程（快速上手，一套搞定）" class="headerlink" title="2.Git与GitHub基础全套完整版教程（快速上手，一套搞定）"></a>2.<a href="https://www.bilibili.com/video/BV1pW411A7a5">Git与GitHub基础全套完整版教程（快速上手，一套搞定）</a></h3><details><summary><b>介绍</b></summary>
+<p>
+
+<p>评价：</p>
+<blockquote>
+<p>尚硅谷的课程，评价如题，Git和GitHub快速上手一套搞定</p>
+</blockquote>
+</p>
+</details>
+
+<h2 id="十、Java并发与JVM"><a href="#十、Java并发与JVM" class="headerlink" title="十、Java并发与JVM"></a>十、Java并发与JVM</h2><h3 id="1-【狂神说Java】JUC并发编程最新版通俗易懂"><a href="#1-【狂神说Java】JUC并发编程最新版通俗易懂" class="headerlink" title="1.【狂神说Java】JUC并发编程最新版通俗易懂"></a>1.<a href="https://www.bilibili.com/video/BV1B7411L7tE">【狂神说Java】JUC并发编程最新版通俗易懂</a></h3><h3 id="2-尚硅谷JVM全套教程，百万播放，全网巅峰（宋红康详解java虚拟机）"><a href="#2-尚硅谷JVM全套教程，百万播放，全网巅峰（宋红康详解java虚拟机）" class="headerlink" title="2.尚硅谷JVM全套教程，百万播放，全网巅峰（宋红康详解java虚拟机）"></a>2.<a href="https://www.bilibili.com/video/BV1PJ411n7xZ">尚硅谷JVM全套教程，百万播放，全网巅峰（宋红康详解java虚拟机）</a></h3><details><summary><b>介绍</b></summary>
+<p>
+
+<p>评价：</p>
+<blockquote>
+<p>太TM细致了</p>
+</blockquote>
+</p>
+</details>
+
+<h2 id="十一、Redis"><a href="#十一、Redis" class="headerlink" title="十一、Redis"></a>十一、Redis</h2><h3 id="1-【狂神说Java】Redis最新超详细版教程通俗易懂"><a href="#1-【狂神说Java】Redis最新超详细版教程通俗易懂" class="headerlink" title="1.【狂神说Java】Redis最新超详细版教程通俗易懂   "></a>1.<a href="https://www.bilibili.com/video/BV1S54y1R7SB">【狂神说Java】Redis最新超详细版教程通俗易懂   </a></h3><h3 id="2-【尚硅谷】2021-最新-Redis-6-入门到精通-超详细-教程"><a href="#2-【尚硅谷】2021-最新-Redis-6-入门到精通-超详细-教程" class="headerlink" title="2.【尚硅谷】2021 最新 Redis 6 入门到精通 超详细 教程"></a>2.<a href="https://www.bilibili.com/video/BV1Rv41177Af">【尚硅谷】2021 最新 Redis 6 入门到精通 超详细 教程</a></h3><h2 id="十二、Linux"><a href="#十二、Linux" class="headerlink" title="十二、Linux"></a>十二、Linux</h2><h3 id="1-【小白入门-通俗易懂】2021韩顺平-一周学会Linux"><a href="#1-【小白入门-通俗易懂】2021韩顺平-一周学会Linux" class="headerlink" title="1.【小白入门 通俗易懂】2021韩顺平 一周学会Linux"></a>1.<a href="https://www.bilibili.com/video/BV1Sv411r7vd">【小白入门 通俗易懂】2021韩顺平 一周学会Linux</a></h3>]]></content>
       <categories>
-        <category>vim</category>
+        <category>resources</category>
       </categories>
       <tags>
-        <tag>vim</tag>
-        <tag>pdf</tag>
+        <tag>BiliBili</tag>
       </tags>
   </entry>
   <entry>
@@ -102,6 +298,20 @@
       </categories>
       <tags>
         <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vim 手册</title>
+    <url>/2020/12/01/vim%E6%89%8B%E5%86%8C/</url>
+    <content><![CDATA[<h1 id="Vim-入门到精通"><a href="#Vim-入门到精通" class="headerlink" title="Vim 入门到精通"></a>Vim 入门到精通</h1><p><embed src="/asset/pdfs/Vim 入门到精通.pdf" width="800" height="600" ></embed></p>
+<h1 id="Vim-中文用户手册"><a href="#Vim-中文用户手册" class="headerlink" title="Vim 中文用户手册"></a>Vim 中文用户手册</h1><p><embed src="/asset/pdfs/vim中文用户手册.pdf" width="800" height="600" ></embed></p>
+]]></content>
+      <categories>
+        <category>vim</category>
+      </categories>
+      <tags>
+        <tag>vim</tag>
+        <tag>pdf</tag>
       </tags>
   </entry>
 </search>
