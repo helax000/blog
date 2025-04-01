@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>B站资源指南</title>
-    <url>/2021/07/27/B%E7%AB%99%E8%B5%84%E6%BA%90%E6%8C%87%E5%8D%97/</url>
+    <url>/blog/2021/07/27/B%E7%AB%99%E8%B5%84%E6%BA%90%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<h2 id="一、计算机网络"><a href="#一、计算机网络" class="headerlink" title="一、计算机网络"></a>一、计算机网络</h2><h3 id="1-计算机网络微课堂"><a href="#1-计算机网络微课堂" class="headerlink" title="1.计算机网络微课堂"></a>1.<a href="https://www.bilibili.com/video/BV1c4411d7jb?p=1">计算机网络微课堂</a></h3><details><summary><b>介绍</b></summary>
 <p>
 
@@ -212,7 +212,7 @@
   </entry>
   <entry>
     <title>js 宏任务与微任务</title>
-    <url>/2020/11/26/jsMacroAndMicroTask/</url>
+    <url>/blog/2020/11/26/jsMacroAndMicroTask/</url>
     <content><![CDATA[<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><ul>
 <li><a href="https://juejin.cn/post/6844903512845860872">这一次，彻底弄懂 JavaScript 执行机制</a> ——ssssyoki</li>
 <li><a href="https://www.cnblogs.com/wangziye/p/9566454.html">js 宏任务和微任务</a> ——wangziye</li>
@@ -302,7 +302,7 @@
   </entry>
   <entry>
     <title>vim 手册</title>
-    <url>/2020/12/01/vim%E6%89%8B%E5%86%8C/</url>
+    <url>/blog/2020/12/01/vim%E6%89%8B%E5%86%8C/</url>
     <content><![CDATA[<h1 id="Vim-入门到精通"><a href="#Vim-入门到精通" class="headerlink" title="Vim 入门到精通"></a>Vim 入门到精通</h1><p><embed src="/asset/pdfs/Vim 入门到精通.pdf" width="800" height="600" ></embed></p>
 <h1 id="Vim-中文用户手册"><a href="#Vim-中文用户手册" class="headerlink" title="Vim 中文用户手册"></a>Vim 中文用户手册</h1><p><embed src="/asset/pdfs/vim中文用户手册.pdf" width="800" height="600" ></embed></p>
 ]]></content>
